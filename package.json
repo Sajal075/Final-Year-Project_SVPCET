@@ -1,0 +1,31 @@
+{
+  "name": "product-tracker-blockchain",
+  "version": "1.0.0",
+  "description": "Blockchain-based product authentication and supply chain management system",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "test:contract": "cd contracts && npm test",
+    "compile": "cd contracts && npx hardhat compile",
+    "deploy:local": "cd contracts && npx hardhat run scripts/deploy.js --network localhost",
+    "deploy:testnet": "cd contracts && npx hardhat run scripts/deploy.js --network sepolia"
+  },
+  "keywords": [
+    "blockchain",
+    "supply-chain",
+    "ethereum",
+    "qr-code",
+    "product-tracking"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+
+
+
